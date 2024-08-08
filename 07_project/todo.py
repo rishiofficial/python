@@ -35,7 +35,7 @@ def update_todo(todos):
     list_of_all_todo(todos)
     index = int(input("Enter the index of the todo: "))
     if 1<= index <= len(todos):
-        todo = input("Update this todo")
+        todo = input("Update this todo: ")
         todos[index-1] = ({"todo ": todo})
         save_todo(todos)
     else:
@@ -44,7 +44,7 @@ def update_todo(todos):
 
 def delete_todo(todos):
     list_of_all_todo(todos)
-    index = input("Enter the index of the todo to delete: ")
+    index = int(input("Enter the index of the todo to delete: "))
     if 1<= index <= len(todos):
        del todos[index-1]
        save_todo(todos)
